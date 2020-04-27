@@ -23,6 +23,13 @@ const encrypt = (salt, password) => {
 const hashedTitle = 'hashed'
 const salt = crypto.randomBytes(32).toString('hex');
 
-encrypt(salt, pwd).then((result) => {
-    fs.writeFileSync(`${hashedTitle}.txt`, result);
-})
+/* 비동기 방식 */
+encrypt(salt, pwd);
+fs.writeFile(`${hashedTitle}.txt`, result, (err) => {
+    if (err) throw err;
+});
+
+/* 동기 방식 */
+// encrypt(salt, pwd).then((result) => {
+//     fs.writeFileSync(`${hashedTitle}.txt`, result);
+// })

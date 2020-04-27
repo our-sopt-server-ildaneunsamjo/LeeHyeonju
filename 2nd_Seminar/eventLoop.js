@@ -8,5 +8,5 @@ function timer(){
     }, 3000);
 }
 
-greet();
 timer();
+greet();
