@@ -101,7 +101,7 @@ router.post('/signin', async(req, res) => {
 router.get('/profile/:id', async(req, res) => {
   // request params 에서 데이터 가져오기
   const id = req.params.id;
-  const user = User.filter(user => user.id == id);
+  const user = User.filter(user => user.id === id);
 
   // 존재하는 아이디인지 확인 - 없다면 No user 반환
   if (user.length == 0){
