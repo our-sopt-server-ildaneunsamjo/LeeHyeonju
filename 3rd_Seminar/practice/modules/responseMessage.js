@@ -20,6 +20,6 @@ module.exports = {
     READ_POST_SUCCESS: "게시글 조회 성공",
     NO_POST: "존재하지 않는 게시글입니다.",
     POST_SUCCESS: "게시글 생성 성공",
-    UPDATE_POST: "게시글 수정 성공"
-
+    UPDATE_POST: "게시글 수정 성공",
+    DELETE_POST: "게시글 삭제 성공"
 };
